@@ -81,6 +81,10 @@
     function stopAutoplay() {
       clearInterval(autoplayInterval);
     }
+    
+  function goBack() {
+    window.history.back();
+  }
 
     document.addEventListener('DOMContentLoaded', () => {
       const gallery = document.getElementById('image-gallery');
@@ -92,6 +96,7 @@
 </head>
 <body>
   <h1>Image Gallery</h1>
+  <button class="exit-button" onclick="goBack()">&#8617;</button>
   <div class="gallery" id="image-gallery">
     <img src="{{asset('images/Bungalow.jpg')}}" alt="Front view">
     <img src="{{asset('images/Balcony.jpg')}}"alt="House Image 2">
